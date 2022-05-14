@@ -5,14 +5,19 @@ import android.os.Parcelable
 
 @MyData.Parcelize
 data class MyData(
-    var name: String,
-    var description: String,
-    var photo: String
-) : Parcelable {
+    var name: String?,
+    var description: String?,
+    var photo: String?,
+    val lat: Double,
+    val lang: Double
+
+    ) : Parcelable {
     constructor(parcel: Parcel) : this(
-        parcel.readString().toString(),
-        parcel.readString().toString(),
-        parcel.readString().toString()
+        parcel.readString(),
+        parcel.readString(),
+        parcel.readString(),
+        parcel.readDouble(),
+        parcel.readDouble()
     ) {
     }
 
@@ -22,6 +27,8 @@ data class MyData(
         parcel.writeString(name)
         parcel.writeString(description)
         parcel.writeString(photo)
+        parcel.writeDouble(lat)
+        parcel.writeDouble(lang)
     }
 
     override fun describeContents(): Int {

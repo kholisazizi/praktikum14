@@ -11,11 +11,18 @@
         <entry key="..\:/Users/user/AndroidStudioProjects/lifecycleapp/praktikum5/src/main/res/layout/activity_practice5_read_data.xml" value="0.2" />
         <entry key="..\:/Users/user/AndroidStudioProjects/lifecycleapp/praktikum5/src/main/res/layout/fragment_practice5_first.xml" value="0.16032608695652173" />
         <entry key="..\:/Users/user/AndroidStudioProjects/lifecycleapp/praktikum5/src/main/res/layout/fragment_practice5_read_data.xml" value="0.25" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/lifecycleapp/praktikum6/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1945" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/lifecycleapp/praktikum6/src/main/res/drawable/ic_launcher_background.xml" value="0.1945" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/lifecycleapp/praktikum6/src/main/res/layout-w1240dp/content_scrolling.xml" value="0.1285140562248996" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/lifecycleapp/praktikum6/src/main/res/layout/activity_detail.xml" value="0.2" />
         <entry key="..\:/Users/user/AndroidStudioProjects/lifecycleapp/praktikum6/src/main/res/layout/activity_main.xml" value="0.18" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/lifecycleapp/praktikum6/src/main/res/layout/activity_maps.xml" value="0.2" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/lifecycleapp/praktikum6/src/main/res/layout/content_scrolling.xml" value="0.1859375" />
         <entry key="..\:/Users/user/AndroidStudioProjects/lifecycleapp/praktikum6/src/main/res/layout/item_cardview.xml" value="0.2" />
         <entry key="..\:/Users/user/AndroidStudioProjects/lifecycleapp/praktikum6/src/main/res/layout/item_grid.xml" value="0.2" />
-        <entry key="..\:/Users/user/AndroidStudioProjects/lifecycleapp/praktikum6/src/main/res/layout/item_list.xml" value="0.16" />
-        <entry key="..\:/Users/user/AndroidStudioProjects/lifecycleapp/praktikum6/src/main/res/menu/menu.xml" value="0.2" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/lifecycleapp/praktikum6/src/main/res/layout/item_list.xml" value="0.33" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/lifecycleapp/praktikum6/src/main/res/menu/menu.xml" value="0.25" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/lifecycleapp/praktikum6/src/main/res/menu/menu_detail.xml" value="0.2" />
       </map>
     </option>
   </component>

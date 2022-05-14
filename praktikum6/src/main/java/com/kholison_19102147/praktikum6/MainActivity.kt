@@ -1,6 +1,5 @@
 package com.kholison_19102147.praktikum6
 
-import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
@@ -13,19 +12,23 @@ import com.kholison_19102147.praktikum6.adapter.GridMyDataAdapter
 import com.kholison_19102147.praktikum6.adapter.ListMyDataAdapter
 
 class MainActivity : AppCompatActivity() {
-
     private val list = ArrayList<MyData>()
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+    private fun showRecyclerCardView() {
+        findViewById<RecyclerView>(R.id.rv_mydata).layoutManager = LinearLayoutManager(this)
+        val cardViewMyDataAdapter = CardViewMyDataAdapter (list, this@MainActivity)
+        findViewById<RecyclerView>(R.id.rv_mydata).adapter = cardViewMyDataAdapter
+    }
 
-        findViewById<RecyclerView>(R.id.rv_mydata).setHasFixedSize(true)
-        list.addAll(getListMyDatas())
-        showRecyclerList()
+    private fun showRecyclerGrid() {
+        findViewById<RecyclerView>(R.id.rv_mydata).layoutManager = GridLayoutManager(this, 2)
+        val gridMyDataAdapter = GridMyDataAdapter(list)
+        findViewById<RecyclerView>(R.id.rv_mydata).adapter = gridMyDataAdapter
     }
 
     private fun getListMyDatas(): ArrayList<MyData> {
+        val dataLang = resources.getStringArray(R.array.data_lang)
+        val dataLat = resources.getStringArray(R.array.data_lat)
         val dataName = resources.getStringArray(R.array.data_name)
         val dataDescription = resources.getStringArray(R.array.data_description)
         val dataPhoto = resources.getStringArray(R.array.data_photo)
@@ -34,27 +37,31 @@ class MainActivity : AppCompatActivity() {
             val myData = MyData(
                 dataName[position],
                 dataDescription[position],
-                dataPhoto[position]
+                dataPhoto[position],
+                dataLat[position].toDouble(),
+                dataLang[position].toDouble()
             )
             listMyData.add(myData)
         }
         return listMyData
     }
 
-    @SuppressLint("CutPasteId")
     private fun showRecyclerList() {
         findViewById<RecyclerView>(R.id.rv_mydata).layoutManager = LinearLayoutManager(this)
         val listMyDataAdapter = ListMyDataAdapter(list)
         findViewById<RecyclerView>(R.id.rv_mydata).adapter = listMyDataAdapter
     }
+
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         menuInflater.inflate(R.menu.menu, menu)
         return super.onCreateOptionsMenu(menu)
     }
+
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         setMode(item.itemId)
         return super.onOptionsItemSelected(item)
     }
+
     private fun setMode(selectedMode: Int) {
         when (selectedMode) {
             R.id.action_list -> {
@@ -68,16 +75,13 @@ class MainActivity : AppCompatActivity() {
             }
         }
     }
-    @SuppressLint("CutPasteId")
-    private fun showRecyclerGrid() {
-        findViewById<RecyclerView>(R.id.rv_mydata).layoutManager = GridLayoutManager(this, 2)
-        val gridMyDataAdapter = GridMyDataAdapter(list)
-        findViewById<RecyclerView>(R.id.rv_mydata).adapter = gridMyDataAdapter
-    }
-    @SuppressLint("CutPasteId")
-    private fun showRecyclerCardView() {
-        findViewById<RecyclerView>(R.id.rv_mydata).layoutManager = LinearLayoutManager(this)
-        val cardViewMyDataAdapter = CardViewMyDataAdapter (list)
-        findViewById<RecyclerView>(R.id.rv_mydata).adapter = cardViewMyDataAdapter
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+
+        findViewById<RecyclerView>(R.id.rv_mydata).setHasFixedSize(true)
+        list.addAll(getListMyDatas())
+        showRecyclerList()
     }
 }
