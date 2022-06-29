@@ -1,4 +1,21 @@
 <resources>
     <string name="app_name">praktikum11</string>
-    <string name="default_web_client">default_web_client</string>
+    <string name="title">judul</string>
+    <string name="description">deskripsi</string>
+    <string name="category">kategori</string>
+    <string name="submit">Submit</string>
+    <string name="date">Tanggal</string>
+    <string name="delete">Hapus</string>
+    <string name="default_web_client" />
+    <string name="quote">Quote</string>
+    <string name="sign_out">Sign Out</string>
+    <string name="verify_email">Verify Email</string>
+    <string name="uid">UID</string>
+    <string name="user_id">User ID</string>
+    <string name="verify">Verify</string>
+    <string name="_62">+62</string>
+    <string name="resend_code">Resend Code</string>
+    <string name="verification_code">Verification Code</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="phone_number_auth">Phone Number Auth</string>
 </resources>

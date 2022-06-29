@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.text.TextUtils
 import android.view.View
 import android.widget.Toast
+import com.kholison_19102147.praktikum11.databinding.ActivitySignInBinding
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
@@ -15,8 +16,8 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.GoogleAuthProvider
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
-import com.kholison_19102147.praktikum11.databinding.ActivitySignInBinding
 
+@Suppress("UNUSED_VARIABLE", "DEPRECATION")
 class SignInActivity : AppCompatActivity(), View.OnClickListener {
     private lateinit var auth: FirebaseAuth
     private lateinit var binding: ActivitySignInBinding
@@ -49,6 +50,10 @@ class SignInActivity : AppCompatActivity(), View.OnClickListener {
             }
             R.id.btnEmail -> {
                 signIn()
+            }
+            R.id.btnPhone ->{
+                val btnIntent = Intent(this@SignInActivity, PhoneAuthActivity::class.java)
+                startActivity(btnIntent)
             }
         }
     }
@@ -100,6 +105,7 @@ class SignInActivity : AppCompatActivity(), View.OnClickListener {
         }
         return valid
     }
+    @Deprecated("Deprecated in Java")
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         if (requestCode == 9001) {

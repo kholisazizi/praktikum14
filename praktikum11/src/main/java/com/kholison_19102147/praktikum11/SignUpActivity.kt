@@ -5,12 +5,12 @@ import android.os.Bundle
 import android.text.TextUtils
 import android.view.View
 import android.widget.Toast
+import com.kholison_19102147.praktikum11.databinding.ActivitySignUpBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
-import com.kholison_19102147.praktikum11.databinding.ActivitySignUpBinding
 
-class SignUpActivity : AppCompatActivity(), View.OnClickListener  {
+class SignUpActivity : AppCompatActivity(), View.OnClickListener {
     private lateinit var auth: FirebaseAuth
     private lateinit var binding: ActivitySignUpBinding
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -19,7 +19,6 @@ class SignUpActivity : AppCompatActivity(), View.OnClickListener  {
         setContentView(binding.root)
         binding.btnCreateAccount.setOnClickListener(this)
         auth = Firebase.auth
-        setContentView(R.layout.activity_sign_up)
     }
     override fun onClick(v: View) {
         when (v.id) {
