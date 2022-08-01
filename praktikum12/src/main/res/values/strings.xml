@@ -1,0 +1,10 @@
+<resources>
+    <string name="default_web_client">851126335958-vboc3ihrcmcadj74b0klpcojb6mpf447.apps.googleusercontent.com</string>
+    <string name="app_name">praktikum 11</string>
+    <string name="title">judul</string>
+    <string name="description">deskripsi</string>
+    <string name="category">kategori</string>
+    <string name="submit">Submit</string>
+    <string name="date">Tanggal</string>
+    <string name="delete">Hapus</string>
+</resources>
